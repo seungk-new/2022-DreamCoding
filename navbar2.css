@@ -1,0 +1,104 @@
+:root {
+    --text-color : red;
+    --background-color : brown;
+    --accent-color : slategray;
+}
+body {
+    margin : 0;
+    font-family: "Source Sans Pro";
+}
+
+a {
+    text-decoration: none;
+    color : var(--text-color);
+}
+
+.navbar {
+    justify-content: space-between;
+    display : flex;
+    background-color: coral;
+    align-items : center;
+    padding : 8px 12px;
+}
+
+
+.navlogo {
+    font-size: 24px;
+    color: black;
+}
+
+.navlogo i {
+    color : white;
+}
+
+.navmenu {
+    display : flex;
+    list-style: none;
+    padding-left : 0;
+}
+
+
+.navmenu li {
+    padding : 8px 11px
+    
+}
+
+.navmenu li:hover {
+    border-radius: 4px;
+    background-color: greenyellow;
+}
+
+
+
+.navicons {
+    list-style : none;
+    display: flex;
+    padding-left: 0;
+    color : blueviolet;
+}
+
+.navicons li {
+    padding : 11px 11px;
+  
+   
+    
+}
+.navbartoggle {
+    display : none;
+    position: absolute;
+    right : 32px;
+    font-size : 24px;
+    color : salmon;
+}
+
+@media screen and (max-width : 768px) {
+    .navbar {
+        flex-direction : column;
+        align-items: flex-start;
+        padding :8px 24px;
+    }
+    .navmenu {
+        flex-direction: column;
+        align-items : center;
+        width : 100%;
+    }
+    .navmenu li {
+        width : 100%;
+        text-align : center;
+    }
+
+    
+    .navicons {
+        display: none;
+        justify-content: center;
+        width : 100%;
+    }
+    .navbartoggle {
+        display : block;
+    }
+    .navmenu.active,
+    .navicons.active{
+        display: flex;
+    }
+}
+
